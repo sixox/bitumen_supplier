@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  content: MyText
+  position: 1
+  summery: MyText
+  video_file: MyString
+  color: MyString
+  minimum_order: 1
+  specification: MyText
+  hs_code: MyString
+  available: false
+  meta_desc: MyText
+  meta_keyword: MyText
+
+two:
+  name: MyString
+  content: MyText
+  position: 1
+  summery: MyText
+  video_file: MyString
+  color: MyString
+  minimum_order: 1
+  specification: MyText
+  hs_code: MyString
+  available: false
+  meta_desc: MyText
+  meta_keyword: MyText
