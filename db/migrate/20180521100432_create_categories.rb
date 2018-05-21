@@ -5,7 +5,7 @@ class CreateCategories < ActiveRecord::Migration[5.2]
       t.integer :position
       t.boolean :visible
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end

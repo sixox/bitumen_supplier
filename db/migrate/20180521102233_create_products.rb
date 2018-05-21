@@ -14,7 +14,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.text :meta_desc
       t.text :meta_keyword
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end
