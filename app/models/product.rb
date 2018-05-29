@@ -7,6 +7,8 @@ class Product < ApplicationRecord
   belongs_to :category, optional: true
   has_and_belongs_to_many :usages
   has_and_belongs_to_many :packages
+  has_many :subproduct, class_name: "Product", foreign_key: "parent_id"
+  belongs_to :parent, class_name: "Product"
 
 
   scope :sorted, lambda {order("products.position ASC")}

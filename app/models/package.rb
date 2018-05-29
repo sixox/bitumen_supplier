@@ -5,4 +5,7 @@ class Package < ApplicationRecord
 
   belongs_to :category, optional: true
 
+  scope :sorted, lambda {order("packages.name ASC")}
+
+
 end

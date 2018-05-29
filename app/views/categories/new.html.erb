@@ -1,0 +1,12 @@
+
+<h2>Create Category</h2>
+
+<%= form_for @category do |f| %>
+
+    <%= render(:partial => "form", :locals => {:f => f}) %>
+
+    <div class="form-buttons">
+      <%= submit_tag("Create Category") %>
+    </div>
+
+<% end %>

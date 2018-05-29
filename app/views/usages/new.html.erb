@@ -1,0 +1,11 @@
+<h2>Create Usage</h2>
+
+<%= form_for @usage do |f| %>
+
+    <%= render(:partial => "form", :locals => {:f => f}) %>
+
+    <div class="form-buttons">
+      <%= submit_tag("Create Usage") %>
+    </div>
+
+<% end %>

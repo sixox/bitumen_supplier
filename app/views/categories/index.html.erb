@@ -1,0 +1,24 @@
+<table class="table">
+  <thead class="thead-light">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">Visible</th>
+    <th scope="col">Assighn to</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @categories.each do |category| %>
+      <tr>
+        <th scope="row"><%= category.position %></th>
+        <td><%= category.name %></td>
+        <td><%= category.visible %></td>
+        <td>
+          <%= !category.packages.nil? ? '-' : 'Packages -' %>
+          <%= !category.usages.nil? ? '-' : '- Usages' %>
+          <%= category.products.count == 0 ? '-' : ' -Products' %>
+         </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

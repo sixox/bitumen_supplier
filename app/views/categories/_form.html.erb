@@ -1,0 +1,15 @@
+
+<table summary="Category form fields">
+  <tr>
+    <th><%= f.label(:name, "Name") %></th>
+    <td><%= f.text_field(:name) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:position) %></th>
+    <td><%= f.select(:position, 1..@category_count) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:visible) %></th>
+    <td><%= f.check_box(:visible) %></td>
+  </tr>
+</table>

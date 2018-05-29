@@ -1,0 +1,23 @@
+<table class="table">
+  <thead class="thead-light">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">Content</th>
+    <th scope="col">Assighn to</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @usages.each do |usage| %>
+      <tr>
+        <th scope="row"><%= usage.id %></th>
+        <td><%= usage.name %></td>
+        <td><%= usage.content %></td>
+        <td>
+          <%= usage.category.nil? ? '-' : 'category -' %>
+          <%= usage.products.count == 0 ? '-' : ' -Products' %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,24 @@
+<table class="table">
+  <thead class="thead-light">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">Content</th>
+    <th scope="col">Assighn to</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @packages.each do |package| %>
+      <tr>
+        <th scope="row"><%= package.id %></th>
+        <td><%= package.name %></td>
+        <td><%= truncate package.content, :length => 17 %></td>
+        <td>
+          <%= package.category.nil? ? '-' : 'Category -' %>
+          <%= package.tags.count == 0 ? '-' : ' -tags' %>
+          <%= package.products.count == 0 ? '-' : ' -Products' %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,11 @@
+<h2>Create Packages</h2>
+
+<%= form_for @package do |f| %>
+
+    <%= render(:partial => "form", :locals => {:f => f}) %>
+
+    <div class="form-buttons">
+      <%= submit_tag("Create Package") %>
+    </div>
+
+<% end %>

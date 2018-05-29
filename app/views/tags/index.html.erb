@@ -1,0 +1,24 @@
+<table class="table">
+  <thead class="thead-light">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">Content</th>
+    <th scope="col">Assighn to</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @tags.each do |tag| %>
+      <tr>
+        <th scope="row"><%= tag.id %></th>
+        <td><%= tag.name %></td>
+        <td><%= tag.content %></td>
+        <td>
+
+          <%= tag.products.count == 0 ? '-' : ' -Products' %>
+          <%= tag.packages.count == 0 ? '-' : ' -packages' %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

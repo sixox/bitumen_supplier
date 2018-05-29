@@ -1,0 +1,11 @@
+<h2>Create Tags</h2>
+
+<%= form_for @tag do |f| %>
+
+    <%= render(:partial => "form", :locals => {:f => f}) %>
+
+    <div class="form-buttons">
+      <%= submit_tag("Create Tag") %>
+    </div>
+
+<% end %>
